@@ -1,0 +1,34 @@
+#Q1. Difference Between Map,Filter,Foreach ?
+
+-> map()
+	-> Map function is a higher order Function in javascript 
+	-> Its return a new array based on existing array 
+	-> how it work -> if we want one function applying a list of elements so that time we use map function. 
+	->Examples :
+		-> var arry = [10, 20 , 30 , 40]
+		var newarr =  arry.map(item => item*10)
+		console.log(newarr)
+		// OutPut : - [ 100, 200, 300, 400 ] 
+
+-> Filter()
+	-> Filter is A higher order Function 
+	-> Filter function return a new array when the condition will true 
+	-> how it work  -> When we have multiple data in one array if we want to filter some data like greaterthan> any number(6)
+	-> That time we use filter funcion in Javascript 
+	-> Examples : 
+		-> var arry = [10, 20 , 30 , 40]
+		var newarry = arry.filter(item => item > 10)
+		console.log(newarry)
+		// Output [ 20, 30, 40 ] 
+
+-> ForEach:
+	-> Foreach Doesnot return a new array 
+	-> Its itrate over a array 
+	-> Its used to logging , updateing variable or modifying the data
+
+	-> Examples : arry.forEach((ary)=> console.log(ary))
+			// Output : 
+			// 10
+			// 20
+			// 30
+			// 40 

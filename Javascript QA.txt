@@ -32,3 +32,193 @@
 			// 20
 			// 30
 			// 40 
+
+
+
+
+#Q2. Difference Between map() and ForEach() ?
+
+ MAP()						FOREACH()
+
+-> Its a array fucntion 			-> Its a Array Function 
+-> Map function return a new array 		-> Its doesnot return a new array 
+
+-> Example: 					-> Example
+let array = [120,30, 40, 3]                   let array = [120,30, 40, 3]		
+const ne = array.map((item)=>{			-> const newforeav= array.forEach((item)=>{		 
+  return item + 2					return item + 3	
+})						})
+console.log(ne); // [ 122, 32, 42, 5 ]		console.log(newforeav)  // undefine 
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+
+
+#Q3. Difference Between null and undefine ? 
+
+NULL 						UNDEFINED
+
+-> null is a particular value 			-> undefined is a not initial any value 
+
+-> null type is a Object			->  undefined  type is undefine  
+
+-> console.log(typeof undefined)//		-> console.log(typeof null) // object
+
+-> console.log(null == undefined)// true	-> console.log(null === undefined) // false
+						
+-> var a = null ;				-> var a ;
+console.log(a) // null				-> console.log(a)  // undefined
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q4.What is Var let and Const ? 
+
+-> VAR
+..........
+-> when it declare use var keyword 
+-> var variables can be redeclared and reassigned.
+-> when we declare a var variable inside curly bracket  it cann assign outside the scope 
+-> we can update the var  variable 
+-> Example: 
+-> {
+  var a = "subu"
+   }
+console.log(a)  // subu
+
+
+-> LET :
+..................
+-> let variables can be reassigned, but not redeclared within the same block scope.
+
+-> Examples: 
+{
+  let a = "subu"
+}
+console.log(a) // a is not defined
+
+-> Exampels : 2
+
+let a = 12
+a = 122 
+console.log(a) // 122 
+
+
+CONST
+..............
+
+-> Variables declared with const also have block scope, just like let.
+
+-> However, const variables are immutable, meaning they cannot be reassigned once they are assigned a value.
+
+-> const a = 100
+	a = 200
+   console.log(a) // error
+
+-> Examples : 2
+
+{
+  const a = 100
+}
+console.log(a); //a is not ddeclae 
+ 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q5. Difference Between call apply and bind method 
+
+
+-> Call()
+
+	-> The call method invokes a function with a specified this value and individual
+	 arguments passed as comma-separated values.
+	
+	-> Examples :-
+ 
+	function greet(arg){
+  		work ="testing "
+  		console.log(`helli iam ${arg} and i am a ${this.work}`) // work is testing here  
+		}
+	const person = {
+  	work :"developer",
+  	name :"subrat mohanty"
+	}
+	greet(person.name) // here we using normal function  
+	// if we want to change the this value ysing call() method 
+	greet.call(person,person.name)
+	// 1st argument is :  person object 
+	// 2nd argument is : pass  greet () function arguments 
+ 
+
+-> apply()
+	
+	-> The apply method is similar to call, but it accepts arguments
+	   as an array or an array-like object
+	
+	-> It takes the function context as its first argument
+
+	-> Examples : 
+	
+		->  function greet(arg){
+  			work ="testing "
+ 			 console.log(`helli iam ${arg} and i am a ${this.work}`) // work is testing here  
+		}
+		const person = {
+ 		 work :"developer",
+  		 name :"subrat mohanty"
+		}
+		// greet(person.name) // here we using normal function  
+		// if we want to change the this value ysing apply() method 
+		greet.apply(person,[person.name])
+		// 1st argument is :  person object 
+		// 2nd argument is : pass  greet () function arguments  as an array format
+
+-> bind()
+
+	-> The bind method creates a new function with a specified this value and pre-defined initial arguments.
+
+	-> It does not immediately invoke the function but returns a new function that can be invoked later.
+
+	-> The bind method is often used to create a function with a fixed context or to create a partially applied function.
+
+	
+	-> Examples :
+
+	function greet(arg){
+  		work ="testing "
+  		console.log(`helli iam ${arg} and i am a ${this.work}`) // work is testing here  
+	}
+	const person = {
+  		work :"developer",
+  		name :"subrat mohanty"
+	}
+	// greet(person.name) // here we using normal function  
+	// if we want to change the this value ysing apply() method 
+	const newbindfun = greet.bind(person)
+	// 1st argument is :  person object 
+	// it cant take second arguments  
+	// its create a new function 
+	newbindfun(person.name)  
+	// here we pass 2nd  argument  the new function 
+
+			
+
+	
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+
+					
+
+
+
+
+
+
+

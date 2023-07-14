@@ -1,0 +1,159 @@
+#Q1. Which elements is commen in this two array 
+	const input1 = {a:1,b:2,c:3,d:10,e:12}	
+	const input2 = {f:1,e:12,f:6,d:10}
+	const output = {d:10,e:12}  
+
+=> SOlUTION :- 
+
+ let obj =  {}
+ for(let i in input1){
+     console.log(input1[i])
+     if(input1[i] == input2[i]){
+         obj[i] = (input1[i])
+   	}
+
+ }
+ console.log("Common element are",obj)OUTPUT : {d:10,e:12} 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+#Q2. Find The Second Largest Number in array ? 
+
+	let  input1 = [2,3,56,7,88,87,87]
+	
+	let output = 87
+
+#SOLUTION:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+#Q3.Sort A array 
+-> SOLUTION:
+
+function bubbleSort(arr) {
+    const n = arr.length;
+    for (let i = 0; i < n - 1; i++){
+        console.log("iiiii",arr[i], i)
+      for (let j = 0; j < n - i - 1; j++){
+        console.log("j",arr[j],j
+        )
+        // console.log("j+1",arr[j+1], j)
+        if (arr[j] > arr[j+1]) {
+          // Swap elements
+          const temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+
+        }
+      }
+    }
+    return arr;
+  }
+
+  const numbers = [7, 2, 5, 1, 9];
+  const sortedArray = bubbleSort(numbers);
+  console.log(sortedArray);
+OUTPUT: [ 1, 2, 5, 7, 9 ]
+
+SOLUTION:2 ...............................
+
+  number = numbers.sort((a,b)=> a-b)
+  console.log(number)
+OUTPUT: [ 1, 2, 5, 7, 9 ]
+	
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q4. Remove Duplicate Value in array ? 
+
+
+
+-> let array  =  [1, 2, 3,4,2,4,5 ]
+
+   let newarray = []
+
+for(let i in array){
+	
+	if(newarray.indexof(array[i]) === -1){
+		
+		newarray.push(array[i])
+	}
+}
+
+console.log(newarray) // Output : [1 , 2 ,3 ,4 ,5]
+
+
+
+-> Using  Built in method:>>>>>>>>>>>>>>>>>>>>>>>
+
+
+-> const newarry =  Array.from(new Set(ary))
+   console.log(newarry) // Output : [1 , 2 ,3 ,4 ,5]
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q5.  Largest number of array ?
+============================================
+->  let array = [2,4,3,5,67,23,11]
+    let max = array[0]
+
+    for(let i in array){
+	
+	if(array[i] > max){
+	
+		max = array[i]
+ }	
+	}
+console.log(max) // output : 67
+
+
+
+=> Using Built in Function ?
+================================================
+
+let array = [2,4,3,5,67,23,11]
+
+let maxnumber =  Math.max(...array)
+
+console.log(maxnumber) // 67
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
+
+
+
+
+
+

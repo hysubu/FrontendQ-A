@@ -214,7 +214,32 @@ console.log(a); //a is not ddeclae
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
 
 
-					
+#Q6. Difference Between Find() and Filter() method  ? 
+
+-> Find() 
+
+	-> The "find" method is used to search for the first element in a collection that matches a specific condition.
+	
+	-> Once the first match is found, the search stops, and the method returns that element
+
+	-> If no matching element is found, the method typically returns a "null" or "undefined" value
+
+	-> Examples : 
+	let arr = [2, 4, 3, 5, 67, 23, 11]
+	let d = arr.find((num => num > 3))
+	console.log(d)// 4
+
+
+-> Filter()
+	
+	-> The filter method is used to create a new array with all elements that satisfy a given condition.
+	
+	-> const numbers = [1, 2, 3, 4, 5, 6];
+
+	const evenNumbers = numbers.filter(number => number % 2 === 0);
+	console.log(evenNumbers); // [2, 4, 6]
+
+		
 
 
 

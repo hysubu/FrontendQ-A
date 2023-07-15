@@ -369,21 +369,52 @@ let output = 87
 
 
 
-let arr = [2, 4, 3, 5, 67, 23, 11]
-let len = arr.length
-for(let i = 0 ; i < len ; i++){
-  for(let j = 0; j < len - 1 - i ; j++){
-    if(arr[j] > arr[j+1]){
-      let temp = arr[j]
-      arr[j] = arr[j+1]
-      arr[j+1]=temp
-    }
+// let arr = [2, 4, 3, 5, 67, 23, 11]
+// let len = arr.length
+// for(let i = 0 ; i < len ; i++){
+//   for(let j = 0; j < len - 1 - i ; j++){
+//     if(arr[j] > arr[j+1]){
+//       let temp = arr[j]
+//       arr[j] = arr[j+1]
+//       arr[j+1]=temp
+//     }
+
+//   }
+// }
+// console.log(arr)
+
+
+// let d = arr.find((num => num > 3))
+// console.log(d)
+
+
+let n = 6;
+
+for(let i = 0 ; i < n ; i++){
+  let row = ""
+  for(let j  = 0  ; j < i; j++){
+    row += ""
+  }
+  for(let k = 0  ; k < n-i ; k++){
+    row +="*"
 
   }
+  console.log(row)
 }
-console.log(arr)
 
 
-let d = arr.find((num => num > 3))
-console.log(d)
+
+
+
+
+
+
+
+// for(let i = 0  ;  i < n ; i++){
+//   let row = " "
+//   for (let j =  0 ; j< i ; j++){
+//     row += "* "
+//   }
+//   console.log(row)
+// }
 

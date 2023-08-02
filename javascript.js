@@ -23,7 +23,7 @@
 // Question2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
 // Write a programme to find the second largest number of array 
 // var  input1 = [2,3,56,7,88,87,87]
-let output = 87
+// let output = 87
 // let arr = input1.sort((a,b)=>a-b)
 // console.log(arr)
 // let res = arr[arr.length-1]
@@ -388,19 +388,19 @@ let output = 87
 // console.log(d)
 
 
-let n = 6;
+// let n = 6;
 
-for(let i = 0 ; i < n ; i++){
-  let row = ""
-  for(let j  = 0  ; j < (n-i); j++){
-    row += ""
-  }
-  for(let k = 0  ; k < (n-i) ; k++){
-    row +=" *"
+// for(let i = 0 ; i < n ; i++){
+//   let row = ""
+//   for(let j  = 0  ; j < (n-i); j++){
+//     row += ""
+//   }
+//   for(let k = 0  ; k < (n-i) ; k++){
+//     row +=" *"
 
-  }
-  console.log(row)
-}
+//   }
+//   console.log(row)
+// }
 
 
 
@@ -418,3 +418,236 @@ for(let i = 0 ; i < n ; i++){
 //   console.log(row)
 // }
 
+
+
+
+
+//  a  character vowel or consonent 
+// function vowel_or_consonent(char){
+//   const lower  = char.toLowerCase() 
+//   console.log(lower)
+//   let vawel = ["a", "e" , "i" , "o" , "u"]
+//   if (vawel.includes(lower)){
+//     console.log(char,"is vawel")
+//   }
+//   else{
+//     console.log("consonent")
+//   }
+// }
+// vowel_or_consonent("C")
+
+
+
+
+
+// function alphabet_or_not(char){
+//   if(char.toLowerCase()){
+//     console.log(/^[a-z]$/i.test(char))
+//   }
+  
+// }
+// alphabet_or_not("e")
+
+
+// function aschii_value(char){
+//   console.log(char.charCodeAt())
+// }
+// aschii_value("w")
+
+
+
+// function check_uppercase_lowercase_special_char(char){
+//   if (/[a-z]/.test(char)){
+//     console.log("lowercase")
+//   }else if (/[A-Z]/.test(char)){
+//     console.log("uppercase")
+//   }else if(typeof(parseInt(char)) === "number") {
+//     console.log("number")
+//   }else{
+//     console.log("specialcharcter")
+//   }
+// }
+// check_uppercase_lowercase_special_char("s")
+
+
+
+
+// function even_or_odd(char){
+//   if(char % 2 == 0){
+//     console.log("even number")
+//   }else{
+//     console.log("odd number")
+//   }
+// }
+
+// even_or_odd(9)
+
+
+
+
+
+
+
+// function number_positiv_or_negative(char){
+//   if (char >= 0){
+//     console.log("positiove")
+//   }else if(char <= 0 ){
+//     console.log("negative")
+//   }
+
+// }
+// number_positiv_or_negative("-12")
+
+
+
+// function greatest_number(a , b){
+//   if(a>b){
+//     console.log("gretest", b)
+//   }
+//   else if (a<b){
+//     console.log("greates", b)
+//   }
+// }
+
+// greatest_number(13, 34)
+
+
+// function greatest_number(a, b){
+//   console.log(Math.max(a, b))
+// }
+// greatest_number(12, 4)
+
+
+
+// function number_of_digit(num){
+//   console.log(num.toString().length)
+// }
+// number_of_digit(123333)
+
+
+
+// function sum_of_digit(num){
+//   let total = 0
+//   let str = num.toString()
+//   for(let i = 0 ; i < str.length ; i++){
+//     total += parseInt(str[i])
+//   }
+//   console.log(total)
+// }
+
+// sum_of_digit(123444)
+
+
+
+
+// function sum_of_naturalnumber(N){
+//   let total = 0
+//   for(let i = 1 ; i <= N ; i++){
+//     total += i
+//   }
+//   console.log(total)
+// }
+// sum_of_naturalnumber(2)
+
+
+
+
+// function reverse_number(num){
+//   var dd = 0
+//   while (1 < num){
+//     var d = num % 10
+//     dd = dd * 10 + d 
+//     num = Math.floor(num / 10)
+//   } 
+//   console.log(dd)
+// }
+
+// reverse_number(231)
+
+
+
+
+// function factorial(num){
+//   var fac = 1 
+//   for (let i = 1 ; i <= num; i++ ){
+//     fac *=i  
+
+//   }
+//   console.log(fac);
+// }
+
+// factorial(5)
+
+
+
+
+
+// function primenumber(num){
+//   var count = 0 
+//   for (let i = 1 ; i < num ; i++){
+//     if(num % i == 0 ){
+//       count +=1
+//     }
+//   }
+//   if(count <= 2){
+//     console.log("prime number")
+//   }
+// else{
+//   console.log('not prime')
+// }
+// }
+// primenumber(17)
+
+
+
+
+// function palindrom_number(word){
+//   var len = word.length
+//   var rever = ""
+//   for (let i in word) {
+//     rever = rever+word[len-i-1]
+//   }
+//   if(rever.toLowerCase() === word.toLowerCase()){
+//     console.log("palindrom number")
+//   }
+// }
+// palindrom_number("REVER")
+
+
+// const b = "1243"
+// sum = 0
+// for (const c of b){
+//   console.log(c);
+//   sum +=Math.pow(parseInt(c), b.length)
+// }
+// if (b === sum){
+//   print("c")
+// }
+// console.log(sum)
+
+
+function  armstrong_number(num){
+  let str = num.toString();
+  let len = str.length
+  let sum = 0
+
+  for(let i of str){
+    sum += Math.pow(parseInt(i) , len)
+  }
+  if (num === sum){
+    console.log("armstrong")
+  }else{
+    console.log("Not Armstrong")
+  }
+}
+
+armstrong_number(1234)
+
+
+
+
+
+
+function perfect_number(){
+  
+}

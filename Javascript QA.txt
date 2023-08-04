@@ -239,7 +239,15 @@ console.log(a); //a is not ddeclae
 	const evenNumbers = numbers.filter(number => number % 2 === 0);
 	console.log(evenNumbers); // [2, 4, 6]
 
-		
+	
+
+->  What is Clouser in Javascript 
+
+
+Clouser is a combination of function and the lexical environment
+They enable concepts like private variables and data encapsulation in JavaScript.
+Lexical Environment :  it's a internal  data structure used to store and handle the  variable and function during runtime 
+Below mention this example the lexical environment is a when abhi() function call the variable name is going not value so it can update the value
 
 
 

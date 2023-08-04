@@ -626,28 +626,215 @@
 // console.log(sum)
 
 
-function  armstrong_number(num){
-  let str = num.toString();
-  let len = str.length
-  let sum = 0
+// function  armstrong_number(num){
+//   let str = num.toString();
+//   let len = str.length
+//   let sum = 0
 
-  for(let i of str){
-    sum += Math.pow(parseInt(i) , len)
-  }
-  if (num === sum){
-    console.log("armstrong")
-  }else{
-    console.log("Not Armstrong")
-  }
-}
+//   for(let i of str){
+//     sum += Math.pow(parseInt(i) , len)
+//   }
+//   if (num === sum){
+//     console.log("armstrong")
+//   }else{
+//     console.log("Not Armstrong")
+//   }
+// }
 
-armstrong_number(1234)
-
-
+// armstrong_number(1234)
 
 
 
 
-function perfect_number(){
+
+
+// function perfect_number(){
   
-}
+// }
+
+
+// function area_of_circle(radius){
+//   console.log(Math.PI * radius * radius);
+// }
+// area_of_circle(28)
+
+
+
+// function perfect_number(num){
+//   let sum = 0
+//   for(let i = 1 ; i < num ; i++){
+//     if (num % i == 0){
+//       sum += i
+//     }
+//   }
+//   if (num === sum){
+//     console.log("Perfect number")
+//   }else{
+//     console.log('not Perfect- number')
+//   }
+
+// }
+// perfect_number(6)
+
+
+
+
+
+// function power_of_number(x, y){
+//   console.log(Math.pow(x,y));    // 3*3*3 = 27  
+// }
+
+// power_of_number(3, 3)
+
+
+
+
+// function factor_of_number(num){
+//   let fact = []
+//   for(let i = 1 ; i <=num ; i++){
+//     if(num % i === 0 ){
+//       fact.push(i);
+//     }
+//   }
+//   console.log(fact);
+// }
+// factor_of_number(12)
+// // Output [ 1, 2, 3, 4, 6, 12 ]
+
+
+
+// function days_in_month(m , y ){
+//   let day = new Date(y , m, 0).getDate()
+//   console.log(day)
+// }
+
+// days_in_month(2 , 2023)
+
+
+
+
+// function max_handshek(numpeople){
+//   console.log((numpeople - 1)/2)
+//   console.log(numpeople * (numpeople - 1)/2 )
+// }
+// max_handshek(7)
+
+
+
+
+// function highest_commen_factor(x,y){
+//   let hcf = 0
+//   let min = 0
+//   if (x > y ){
+//     min = y
+//   } else{
+//     min =  x
+//   }
+//   for(let i = 1 ; i <= min ; i++){
+//     if(x % i === 0 && y % i === 0){
+//       hcf = i
+//     }
+//   }
+// console.log(hcf);
+// }
+// highest_commen_factor(19, 27)
+
+
+
+
+
+
+
+
+
+
+
+
+// function lowest_commen_mulplle(x , y ){
+//   let large = Math.max(x, y)
+//   // console.log(large);
+//   let value = large
+//   while(true){
+//   if (large % x == 0 && large % y == 0 ){
+//     console.log(large)
+//     break;
+
+//   }else{
+//     large = large + value
+//   }
+// }
+// }
+// lowest_commen_mulplle(12, 18) // 36 
+
+
+
+
+
+
+// function greates_commen_devisor(x , y , z ){
+//   let gcd = 0
+//   min = Math.min(x , y , z )
+//   for (let i = 1 ; i<=min ; i++){
+//     if(x % i === 0  && y % i === 0 && z % i === 0 ){
+//        gcd = i
+//     }
+//   }
+//   console.log(gcd)
+// }
+
+
+// greates_commen_devisor(12 , 22 , 30 )
+
+
+// function equllll(a , b){
+//   if( a === b){
+//     console.log("true")
+//   }else{
+//     console.log('false')
+//   }
+// }
+// equllll(1 ,1)
+
+// const arror = (a ,b) => 10 + 20
+
+// console.log(arror(10 , 20))
+
+
+
+// function first(){
+//   closure 
+
+
+
+// }
+
+
+// function domMath(a,b ,callback){
+//   const result =  callback(a , b);
+//   console.log("result" , result)
+// }
+
+// function add ( a , b){
+//   return a + b 
+// }
+
+
+// function substract(a , b){
+//   return a - b 
+// }
+
+
+// domMath(10 , 5 , add)
+// domMath(15 , 5 ,substract)
+
+
+
+
+// function ascii_to_char(num){
+//   let char = String.fromCharCode(num)
+//   console.log(char)
+// }
+
+// ascii_to_char(71) //G
+
+

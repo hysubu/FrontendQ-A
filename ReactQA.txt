@@ -1,0 +1,196 @@
+1. What is React, and what are its key features?
+	
+   -> React is a popular JavaScript library for building user interfaces. It allows developers to create reusable
+     UI components and manage the state of the application efficiently.
+	
+  -> Virtual DOM: React creates a virtual representation of the actual DOM, which enhances performance by minimizing direct DOM manipulation.
+
+  -> Component-based architecture: React breaks the UI into small, reusable components, making development and maintenance easier.
+
+  -> JSX (JavaScript XML): JSX is a syntax extension for JavaScript, allowing developers to write HTML-like code inside JavaScript for describing the UI.
+
+  -> Unidirectional data flow: Data in React flows in a single direction, from parent components to child components, making it easier to manage and debug data flow.
+
+  -> React hooks: Hooks allow functional components to use state and other React features that were previously only available in class components.
+
+  -> React ecosystem: React is backed by a large and active community, providing a rich ecosystem of libraries and tools to aid development.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q2. What are components in React? Explain the difference between functional components and class components.
+
+
+ -> Components in React are reusable and self-contained building blocks for UI elements. 
+   They can be simple or complex, depending on the application's needs.
+
+
+-> Functional components: Defined as JavaScript functions, functional components are stateless and mainly used
+  for presenting UI without managing state or using lifecycle methods. They are easier to write, test, and understand.
+
+-> Class components: Defined as ES6 classes, class components can have state and lifecycle methods.
+ They were used before the introduction of hooks for managing state and lifecycle in React applications.
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+#Q3. What is JSX, and why is it used in React?   
+
+   -> JSX is a syntax extension for JavaScript that allows writing Code insdide the Html or Ui code 
+
+   -> We can write inside the " { } "  flower bracket 
+	
+   -> It allows developers to combine JavaScript logic and UI components in the same file, improving code maintainability and readability.
+
+
+Examples:- import React from 'react';
+
+const JSXExample = () => {
+  const name = 'John Doe';
+  const isLoggedIn = true;
+  const numbers = [1, 2, 3, 4, 5];
+
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>  // here Jsx is name 
+      {isLoggedIn ? (
+        <p>Welcome back, {name}!</p>
+      ) : (
+        <p>Please log in to continue.</p>
+      )}
+
+      <ul>
+        {numbers.map((number) => (
+          <li key={number}>{number}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default JSXExample;
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q4. What are React hooks? Can you list some of the built-in hooks?
+
+  -> React hooks are functions that allow functional components to use state and other React features.
+    They were introduced in React 16.8.
+	
+  -> There are multiple builtin hook avilable in react 
+	 
+	-> useState: Allows functional components to have local state.
+
+	-> useEffect: Enables handling side effects in functional components, such as data fetching or subscriptions.
+	
+	-> useContext:  provides a way to share data between components without explicitly passing props through every level of the component tree
+
+
+
+
+
+
+
+
+#Q5. How can you pass data from a parent component to a child component in React ? 
+
+	-> Data can be passed from a parent component to a child component using props.
+	
+	-> Examples :
+ function ParentComponent() {
+  const data = 'Hello from Parent!';
+  return <ChildComponent message={data} />;
+}
+
+function ChildComponent(props) {
+  return <div>{props.message}</div>;
+}
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q6. What is React context, and how is it used for state management? 
+
+	-> React context provides a way to pass data through the component tree without
+	   having to pass props manually at every level.
+
+	-> Examples : 
+		
+		// MyContext.js
+import React from 'react';
+
+const MyContext = React.createContext();
+export default MyContext;
+
+
+->....// App.js
+import React from 'react';
+import MyContext from './MyContext';
+import ComponentA from './ComponentA';
+
+function App() {
+  const data = 'Hello from Context!';
+
+  return (
+    <MyContext.Provider value={data}>
+      <ComponentA />
+    </MyContext.Provider>
+  );
+}
+
+export default App;
+
+
+
+-->  // ComponentA.js
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
+
+function ComponentA() {
+  const contextData = useContext(MyContext);
+
+  return <div>{contextData}</div>;
+}
+
+export default ComponentA;
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#Q7. Explain React Router and its benefits.
+
+	-> React Router is a library that provides routing capabilities to React applications,
+	 allowing users to navigate between different pages or views.
+
+	-> Its allowing developers to create single-page applications (SPAs) with multiple views.
+
+
+	-> allowing developers to create single-page applications (SPAs) with multiple views.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Q8. What are higher-order components (HOCs), and how can you create one in React
+	
+	-> Higher-order components (HOCs) are functions that take a component as
+	 input and return an enhanced version of that component.
+
+	-> HOCs are used for code reuse, cross-cutting concerns, 
+	and wrapping components with additional functionality.
+
+
+
+
+
+

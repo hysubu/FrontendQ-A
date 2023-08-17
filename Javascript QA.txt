@@ -59,14 +59,14 @@ console.log(ne); // [ 122, 32, 42, 5 ]		console.log(newforeav)  // undefine
 
 
 #Q3. Difference Between null and undefine ? 
-
+...................................................................................................................................
 NULL 						UNDEFINED
-
+....................................................................................................................................
 -> null is a particular value 			-> undefined is a not initial any value 
 
--> null type is a Object			->  undefined  type is undefine  
+-> null type is a Object			->  undefined  type is undefined  
 
--> console.log(typeof undefined)//		-> console.log(typeof null) // object
+-> console.log(typeof null)// object		-> console.log(typeof undefined) // Undefined
 
 -> console.log(null == undefined)// true	-> console.log(null === undefined) // false
 						
@@ -78,9 +78,9 @@ console.log(a) // null				-> console.log(a)  // undefined
 
 
 #Q4.What is Var let and Const ? 
-
+......................................................................
 -> VAR
-..........
+......................................................................
 -> when it declare use var keyword 
 -> var variables can be redeclared and reassigned.
 -> when we declare a var variable inside curly bracket  it cann assign outside the scope 
@@ -91,9 +91,9 @@ console.log(a) // null				-> console.log(a)  // undefined
    }
 console.log(a)  // subu
 
-
+..........................................................................
 -> LET :
-..................
+..........................................................................
 -> let variables can be reassigned, but not redeclared within the same block scope.
 
 -> Examples: 
@@ -108,9 +108,9 @@ let a = 12
 a = 122 
 console.log(a) // 122 
 
-
+.........................................................................
 CONST
-..............
+.........................................................................
 
 -> Variables declared with const also have block scope, just like let.
 
@@ -241,13 +241,347 @@ console.log(a); //a is not ddeclae
 
 	
 
-->  What is Clouser in Javascript 
+Q7.  What is Clouser in Javascript 
 
 
 Clouser is a combination of function and the lexical environment
 They enable concepts like private variables and data encapsulation in JavaScript.
 Lexical Environment :  it's a internal  data structure used to store and handle the  variable and function during runtime 
 Below mention this example the lexical environment is a when abhi() function call the variable name is going not value so it can update the value
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Q8. What is callback() function and why we use Callback function in javascript ? 
+
+
+->Callback functions in JavaScript are used to handle asynchronous operations and control
+ the flow of execution when dealing with tasks that may take some time to complete
+
+
+-> function fetchDataFromAPI(callback) {
+  // Simulating an API call with a timeout
+  setTimeout(() => {
+    const data = { name: "John", age: 30 };
+    callback(data); // Callback function is executed with the data
+  }, 2000);
+}
+
+function processData(data) {
+  console.log("Received data:", data);
+}
+
+fetchDataFromAPI(processData);
+console.log("This will be printed first as the API call is asynchronous."x);
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+Q9. What is The ES6 Features  javascript ? 
+
+
+1. Let and Const key word for declaring Variables 
+
+->Examples : 
+
+ for(let i = 0; i < 5; i++) {
+    console.log(i); // 0,1,2,3,4
+}
+console.log(i); // undefined
+
+
+
+2.  For of Loop to itrate a array or string etc 
+
+
+
+-> Examples: 
+let letters = ["a", "b", "c", "d", "e", "f"];
+
+for(let letter of letters) {
+    console.log(letter); // a,b,c,d,e,f
+}
+
+
+3.Templates Literals : it provide an easy to clean way create  Multi-line strings 
+
+	-> Examples : let str = `The quick brown fox
+    			jumps over the lazy dog.`;
+
+4.Arrow Function : -  Arrow function its reaturn value without return keyword 
+
+-> Examples :
+ var greet = name => alert("Hi " + name + "!");
+greet("Peter"); // Hi Peter!   
+
+
+5. Classes : its object oriented languages 
+
+-> Examples :
+ class Rectangle {
+    // Class constructor
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+    // Class method
+    getArea() {
+        return this.length * this.width;
+    }
+}
+
+
+
+
+6. Spread operator ...
+
+
+-> Examples : 
+
+function spread_oper(...a){
+    console.log(a)
+}
+a = [10 , 20 , 30 , 40 ]
+
+spread_oper( a) //[ 10, 20, 30, 40 ]
+
+
+
+7. De-structring : The destructuring assignment is an expression that makes it easy to extract values from arrays, or properties from objects, 
+
+-> Examples : (Array De structring )
+	let fruits = ["Apple", "Banana"];
+
+	let [a, b] = fruits; // Array destructuring assignment
+	
+alert(a); // Apple
+alert(b); // Banana
+
+
+-> Examples :- 
+let person = {name: "Peter", age: 28};
+
+let {name, age} = person; // Object destructuring assignment
+
+alert(name); // Peter
+alert(age); // 28
+
+
+
+
+
+
+
+
+
+
+
+Q10. What is Promises ?
+
+-> Promises are a feature  in javascript that provide a way to handel asynchronous operations in a more organized
+
+-> They are used to manage the flow of asynchronous code and handel the result or error 
+
+-> Promises take Two Arguments one is Resolve and Another is reject  
+
+->   resolve Mean when the code is succesfully the is return Resolve 
+
+-> The Reject - If the propertios or code some error then the  reject  return 
+
+-> 
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+Q9. What is DOM in javascript ? 
+
+
+-> DOM stand document object model in javascript Programming language 
+
+-> The DOM allow to Scripts to intract with content , structure and style  of webPages  Dynamically 
+
+-> Its Access to Javascript code to Modifying and update  the elements and propoties 
+
+
+-> DOM is access  And Modifying Contents of Elements 
+
+-> Examples :
+var myDiv = document.getElementById("myDiv"); 
+myDiv.textContent = "Changed text content!"; 
+
+
+-> Change Elements Attribute Style 
+Examples : 
+	Mydiv.style.backgroundColor = "red"
+
+->Create, read, and modify the document's structure.
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+Q10. Difference between null and Undefined ? 
+
+
+-> Both are showing whenever the value is absence  or not available 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Undefined  							          NULL
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> When the value is absense any variables or function            -> When the value is absense but we use null keyword there that      
+that time showing Undefined .                                       time its showing null  value 
+ 
+-> Uninitialized Value  : If we declare a variable without        -> if we want declare vvar or function without value thatt
+assign any value that time it have value is undefined 			 time we use null key word that time showing Null Value 
+
+-> Missing Object Properties: If we try to access an objct        -> NULL is International Absense value mean not anythig there 
+ property but this property os not exists in objects that         
+time the value is undefined 
+
+-> Function Parameters: If we called a function but                -> Examples:
+ function have parameter but when we call function without   			let b = null;
+ giving any argument that time values is Undefined 				console.log(b); // Output: null
+
+->Exampels : 									const obj = { property : null};
+
+ let a;										console.log(obj.property); // Output: null
+console.log(a); // Output: undefined
+
+const obj = {};
+console.log(obj.property); // Output: undefined
+
+function foo(x) {
+    console.log(x);
+}
+foo(); // Output: undefined
+ 
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+Q11.Describe the use cases and differences between shallow copy and deep copy of objects and arrays.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+-> Shallow Copy 								-> DEEP COPY 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Its used when we want to copy of any value                                     -> Its used when if we want to copy any data or array or object 
+
+-> when we use Shallow Copy if we modify the duplicate value  it will 		   -> It mean when we copy any data its not affect of original data 
+change the original value   
+
+-> Shallow copy is generally faster and uses less memory for large		    -> When we modify the copied  structure its cant affect original data 
+ structures.
+
+-> Shallow Copy use less memory  for larg structure and 
+
+-> Its faster than Deep copy 
+
+
+
+
+
+#Q12. What is a closure, and how do closures help in JavaScript? Provide an example of a closure.
+
+
+	-> Clouser is a simple concept in javscript to hiding or ec=ncapsulate the data or private the data 
+
+	-> Examples : 
+
+
+#Q13. How would you select elements in the DOM using JavaScript ? 
+
+	-> Javascript have many method of DOM(document object model) to select elements 
+---------------------------------------
+	1. getElementByID(): This Method select an elements bt its unique "id" attribute
+--------------------------------------
+	Example : const element = document.getElementById("elementId");
+
+--------------------------------------
+	2. getElementsByClassName("className"): This Method take Elements ClassName
+--------------------------------------
+	-> Examples : - const element = document getElementClassName("elementclassName")
+---------------------------------------
+	3. getElementsByTagName("tagname"): It can take The Elemnet  name 
+
+	-> Exmaple:- const element : - documen.getElementByTagName("div")
+---------------------------------------
+	4. querySelector(".elementclaaname") // if we give classname wecan using "."us9ng before 
+
+	-> querySelector(".elementclaaname") // if we give id name we can use "#" usnig before
+---------------------------------------
+	5. querySelectorAll
+
+ 
+	
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+
+								OOPS(Object Oriented Programming )
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q14. Explain the principles of encapsulation, abstraction, and inheritance in JavaScript.
+
+
+	-> 
+
+Explain the concept of a callback function and why it's commonly used in asynchronous operations.
+
+How do you use the bind, call, and apply methods to manipulate the value of this in a function?
+Explain the difference between synchronous and asynchronous code execution. How do you manage asynchronous operations effectively?
+
+What are callback hell and the pyramid of doom? How can you mitigate them?
+
+
+Describe how Promises work in JavaScript. What are the benefits of using Promises?
+
+How do you handle multiple Promises using Promise.all and Promise.race?
+
+Explain the purpose of the async and await keywords. Provide an example of using async/await to handle asynchronous operations.
+
+DOM Manipulation and Events:
+
+
+Explain the concept of event delegation and how it can improve performance when handling events.
+
+How do you prevent default behavior and stop event propagation in JavaScript?
+Explain the principles of encapsulation, abstraction, and inheritance in JavaScript.
+
+How would you create a class and instantiate objects in ES6? Provide an example.
+
+What is prototypal inheritance, and how is it different from classical inheritance?
+
+Promises and Async/Await:
+
+
+
+
+
+
 
 
 

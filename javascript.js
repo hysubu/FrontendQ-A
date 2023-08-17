@@ -838,3 +838,256 @@
 // ascii_to_char(71) //G
 
 
+var a = 10
+var b = 20
+a = 10 + 20 
+b = a - b 
+a = a - b
+console.log(a , b);
+
+
+for (var i = 0 ; i < 5 ; i++){
+    console.log(i)
+}
+console.log(i)
+
+
+
+let multiline =  `subrat m 
+shdbhsd j nsd
+asdjbsah , `
+console.log(multiline)
+
+
+
+// for (let i = 0 ; i < 6 ; i++ ){
+//     let emp = " "
+//     for (let j = 0 ; j <  i+1 ; j++){
+//         emp += "*"
+//     }
+//     console.log(emp)
+// }
+
+
+// function spread_oper(...a){
+//     console.log(a)
+// }
+// a = [10 , 20 , 30 , 40 ]
+
+// spread_oper( a) //[ 10, 20, 30, 40 ]
+
+
+
+let promis = new Promise((resolve , reject)=>{
+    setTimeout(()=>{
+       const data = {"message" : "Data fetched Successfully "}
+       if (data){
+        resolve()
+       }else {
+        reject("error Fetching Data")
+       }
+    }, 1000)
+
+})
+.then((data)=>{
+    console.log("dsds",data)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+console.log(promis)
+
+
+
+
+
+// async function  subu(){
+//     try{
+//         setTimeout(()=> {
+//             const d  = ("dsdsd")
+//             console.log(d)
+//         },1000)
+//         console.log("hello")
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+
+
+// subu()
+
+
+
+// DOM MANipulation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// let div = document.getElementById("mydiv")
+// div.addEventListener("click",function(){
+//     div.textContent = "Hello Imag subrat"
+//     // div.style.backgroundColor = "green"
+//     // div.style.border = "1px solid black"
+//     div.style.width  = "600px"
+//     div.style.height = "300px"
+  
+// })
+
+
+// div.style.backgroundColor = "red"
+// div.textContent = "Change Context"
+
+
+// //  Create Elements IN 
+
+// let p = document.createElement("p")
+// p.textContent = "Hello"
+// div.appendChild(p)
+
+// let pp = document.getElementById("p")
+// p.addEventListener("click" , function(){
+// alert("DD") 
+// })
+// console.log(div.innerText)
+
+// {
+//     const b = "10"
+// }
+// console.log(b)
+
+// How does JavaScript handle asynchronous programming?
+
+// console.log("daasas", typeof(undefined))
+
+
+
+// var ab = [12, 3,45,5,[12, 34]]
+// var shallowCopy = [...ab]
+// shallowCopy[4][1] = 38
+// console.log(ab)
+// console.log(shallowCopy)
+
+
+// const div =  document.querySelector("#list")
+// div.textContent  = "hehe"
+// div.addEventListener("click", function(){
+//     alert("hello")
+// })
+// const link = document.getElementById("mylink");
+
+// link.addEventListener("click", function(event) {
+//     event.stopPropagation()
+//     event.preventDefault();
+//     console.log("Link click prevented");
+// });
+
+
+// const arrow = (a, b)=> a+b
+// console.log(arrow(10,34))
+
+
+// function checkvawel_or_not(n){
+//     let vawel = ["a", "e" , "i" ,"o" , "u"]
+//     let alph = []
+//     for (let i of n){
+//         for(let j of vawel){
+//             if(i === j){
+//                 console.log(i)
+//                 alph.push(i)
+//             }
+//         }
+//     }
+//     console.log(alph)
+// }
+
+// checkvawel_or_not("subrat")
+
+
+// const input1 = {a:1,b:2,c:3,d:10,e:12}	
+// const input2 = {f:1,e:12,f:6,d:10}
+// let new_obj = {}
+// len = input1.len
+// for(let i in input1){
+//     if (input1[i] === input2[i]){
+//         new_obj[i] = input1[i]
+//     }
+// }
+// console.log(new_obj)
+// let d = [12, 34, 56,78,23,12,56]
+// let e = []
+
+// for (let i of d ){
+//     if(!e.includes(i)){
+//         e.push(i);
+//     }
+  
+// }
+// console.log(e)
+
+
+// function check_palindrom(n){
+//     let reverse = ""
+//     for (let i in n ){
+//         reverse += n[n.length-i-1]
+//     }
+//     console.log(reverse)
+//     if (reverse === n){
+//         console.log("palindrom number")
+//     }
+//     else{
+//         console.log("not palindrom number ")
+//     }
+    
+// }
+// check_palindrom("suus")
+
+// function create_factroial(n){
+//     let factorial = 1
+//     for(let i = 1; i < n ; i++ ){
+//         factorial *= i
+//     }
+//     console.log(factorial)
+// }
+// create_factroial(10)
+
+
+
+// function find_max(n){
+//     let max = n[0]
+//     for (let i  of n ){
+//         if (i > max){
+//             max = i
+//         }
+//     }
+//     console.log(max)
+
+
+// }
+// find_max([12, 34,56,6,8,9])
+
+
+
+
+
+
+
+// var obj = {
+//     name :"subrat"  , 
+//     age :21 , 
+//     city : "bbsr"
+// }
+
+// var{name , age , city} = obj
+
+// console.log(age)
+
+
+
+
+
+
+
+
+
+
+
+
+
